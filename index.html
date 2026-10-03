@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Key's Inmobiliaria | Nosotros somos la llave</title>
+
+  <meta name="description" content="Encuentra casas, departamentos y propiedades en venta y renta en Querétaro con Key's Inmobiliaria.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy: #071525;
+      --navy-light: #10243a;
+      --gold: #c9a45c;
+      --gold-light: #e0c27d;
+      --white: #ffffff;
+      --gray: #f4f5f7;
+      --text: #1d2630;
+      --muted: #697586;
+      --border: #e5e7eb;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      background: var(--navy);
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .key-icon {
+      width: 38px;
+      height: 38px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 19px;
+    }
+
+    .logo-text strong {
+      display: block;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    .logo-text span {
+      font-size: 10px;
+      color: var(--gold-light);
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-button {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 570px;
+      padding: 90px 6%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background:
+        linear-gradient(90deg, rgba(4,15,27,.96), rgba(7,21,37,.76), rgba(7,21,37,.35)),
+        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 600px;
+      color: #e5e7eb;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.5);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      background: rgba(255,255,255,.08);
+      cursor: pointer;
+    }
+
+    /* SEARCH */
+
+    .search-box {
+      background: white;
+      max-width: 1120px;
+      margin: -45px auto 0;
+      position: relative;
+      z-index: 10;
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 15px 45px rgba(0,0,0,.13);
+    }
+
+    .search-title {
+      font-weight: bold;
+      font-size: 19px;
+      margin-bottom: 16px;
+    }
+
+    .search-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .search-field {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 13px;
+      background: white;
+    }
+
+    .search-button {
+      background: var(--navy);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      padding: 85px 6%;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 35px;
+      gap: 20px;
+    }
+
+    .section-header h2 {
+      font-size: 36px;
+      color: var(--navy);
+    }
+
+    .section-header p {
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .view-all {
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    /* CARDS */
+
+    .properties {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .property-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: .25s;
+    }
+
+    .property-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.10);
+    }
+
+    .property-image {
+      height: 230px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .property-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .4s;
+    }
+
+    .property-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .status {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: #16834d;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .property-body {
+      padding: 20px;
+    }
+
+    .property-type {
+      color: var(--gold);
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+
+    .property-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 7px 0;
+      color: var(--navy);
+    }
+
+    .location {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .price {
+      color: var(--navy);
+      font-size: 23px;
+      font-weight: bold;
+      margin-bottom: 17px;
+    }
+
+    .features {
+      display: flex;
+      gap: 15px;
+      border-top: 1px solid var(--border);
+      padding-top: 15px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* AREAS */
+
+    .areas {
+      background: var(--gray);
+    }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+
+    .area {
+      min-height: 170px;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      align-items: end;
+      color: white;
+      font-size: 19px;
+      font-weight: bold;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .area::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,.75));
+    }
+
+    .area span {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* CTA */
+
+    .agent-section {
+      background: var(--navy);
+      color: white;
+      padding: 80px 6%;
+    }
+
+    .agent-content {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .agent-content h2 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .agent-content p {
+      color: #cbd5e1;
+      max-width: 650px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #040d18;
+      color: white;
+      padding: 50px 6% 25px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    footer h3 {
+      margin
