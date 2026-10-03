@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -426,4 +425,564 @@
     }
 
     footer h3 {
-      margin
+      margin-bottom: 14px;
+    }
+
+    footer p,
+    footer a {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #1e293b;
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 26px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.25);
+      z-index: 1000;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .search-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .properties {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .area-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .agent-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        padding: 15px 5%;
+      }
+
+      .hero {
+        min-height: 570px;
+        padding: 70px 5%;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .search-box {
+        margin: -30px 5% 0;
+        padding: 18px;
+      }
+
+      .search-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 60px 5%;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .section-header h2 {
+        font-size: 29px;
+      }
+
+      .view-all {
+        display: inline-block;
+        margin-top: 12px;
+      }
+
+      .properties {
+        grid-template-columns: 1fr;
+      }
+
+      .area-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .area {
+        min-height: 140px;
+      }
+
+      .agent-content h2 {
+        font-size: 29px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+    <a href="#" class="logo">
+
+      <div class="key-icon">🔑</div>
+
+      <div class="logo-text">
+        <strong>KEY'S</strong>
+        <span>INMOBILIARIA</span>
+      </div>
+
+    </a>
+
+    <div class="nav-links">
+      <a href="#catalogo">Propiedades</a>
+      <a href="#zonas">Zonas</a>
+      <a href="#asesores">Publica tu propiedad</a>
+      <a href="#contacto" class="nav-button">Contactar</a>
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Key's Inmobiliaria
+      </div>
+
+      <h1>
+        Encuentra la llave de
+        <span>tu próximo hogar.</span>
+      </h1>
+
+      <p>
+        Explora propiedades seleccionadas para comprar,
+        rentar o invertir en Querétaro.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#catalogo" class="btn-primary">
+          Explorar propiedades
+        </a>
+
+        <a href="#asesores" class="btn-secondary">
+          Publica tu propiedad
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SEARCH -->
+
+  <div class="search-box">
+
+    <div class="search-title">
+      Encuentra una propiedad
+    </div>
+
+    <div class="search-grid">
+
+      <select class="search-field">
+        <option>Comprar</option>
+        <option>Rentar</option>
+      </select>
+
+      <select class="search-field">
+        <option>Zona</option>
+        <option>Zibatá</option>
+        <option>Zakia</option>
+        <option>Juriquilla</option>
+        <option>El Refugio</option>
+        <option>El Marqués</option>
+      </select>
+
+      <select class="search-field">
+        <option>Tipo de propiedad</option>
+        <option>Casa</option>
+        <option>Departamento</option>
+        <option>Terreno</option>
+        <option>Local comercial</option>
+      </select>
+
+      <button class="search-button">
+        🔎 Buscar propiedades
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- CATALOG -->
+
+  <section class="section" id="catalogo">
+
+    <div class="section-header">
+
+      <div>
+        <h2>Propiedades destacadas</h2>
+        <p>Descubre algunas de las propiedades disponibles en nuestro catálogo.</p>
+      </div>
+
+      <a href="#" class="view-all">
+        Ver todas →
+      </a>
+
+    </div>
+
+
+    <div class="properties">
+
+
+      <!-- PROPERTY 1 -->
+
+      <article class="property-card">
+
+        <div class="property-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+            alt="Casa moderna"
+          >
+
+          <span class="status">
+            DISPONIBLE
+          </span>
+
+        </div>
+
+        <div class="property-body">
+
+          <div class="property-type">
+            Casa · Venta
+          </div>
+
+          <div class="property-title">
+            Casa moderna en Zibatá
+          </div>
+
+          <div class="location">
+            📍 Zibatá, Querétaro
+          </div>
+
+          <div class="price">
+            $3,250,000 MXN
+          </div>
+
+          <div class="features">
+            <span>🛏️ 3</span>
+            <span>🚿 2.5</span>
+            <span>🚗 2</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROPERTY 2 -->
+
+      <article class="property-card">
+
+        <div class="property-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+            alt="Casa residencial"
+          >
+
+          <span class="status">
+            DISPONIBLE
+          </span>
+
+        </div>
+
+        <div class="property-body">
+
+          <div class="property-type">
+            Casa · Venta
+          </div>
+
+          <div class="property-title">
+            Residencia en El Refugio
+          </div>
+
+          <div class="location">
+            📍 El Refugio, Querétaro
+          </div>
+
+          <div class="price">
+            $3,480,000 MXN
+          </div>
+
+          <div class="features">
+            <span>🛏️ 3</span>
+            <span>🚿 3</span>
+            <span>🚗 2</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROPERTY 3 -->
+
+      <article class="property-card">
+
+        <div class="property-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85"
+            alt="Departamento moderno"
+          >
+
+          <span class="status">
+            DISPONIBLE
+          </span>
+
+        </div>
+
+        <div class="property-body">
+
+          <div class="property-type">
+            Departamento · Renta
+          </div>
+
+          <div class="property-title">
+            Departamento en Juriquilla
+          </div>
+
+          <div class="location">
+            📍 Juriquilla, Querétaro
+          </div>
+
+          <div class="price">
+            $18,500 MXN / mes
+          </div>
+
+          <div class="features">
+            <span>🛏️ 2</span>
+            <span>🚿 2</span>
+            <span>🚗 2</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- AREAS -->
+
+  <section class="areas" id="zonas">
+
+    <div class="section">
+
+      <div class="section-header">
+
+        <div>
+          <h2>Zonas destacadas</h2>
+          <p>Explora propiedades en las principales zonas de Querétaro.</p>
+        </div>
+
+      </div>
+
+
+      <div class="area-grid">
+
+        <a class="area"
+           href="#"
+           style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80')">
+          <span>Zibatá</span>
+        </a>
+
+        <a class="area"
+           href="#"
+           style="background-image:url('https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=800&q=80')">
+          <span>Zakia</span>
+        </a>
+
+        <a class="area"
+           href="#"
+           style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80')">
+          <span>Juriquilla</span>
+        </a>
+
+        <a class="area"
+           href="#"
+           style="background-image:url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80')">
+          <span>El Refugio</span>
+        </a>
+
+        <a class="area"
+           href="#"
+           style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80')">
+          <span>El Marqués</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- AGENTS -->
+
+  <section class="agent-section" id="asesores">
+
+    <div class="agent-content">
+
+      <div>
+
+        <div class="eyebrow">
+          Para asesores e inmobiliarias
+        </div>
+
+        <h2>
+          ¿Tienes una propiedad?
+        </h2>
+
+        <p>
+          Forma parte del catálogo de Key's Inmobiliaria
+          y permite que más personas encuentren tu propiedad.
+        </p>
+
+      </div>
+
+      <a href="#contacto" class="btn-primary">
+        Publicar mi propiedad
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer id="contacto">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="logo">
+
+          <div class="key-icon">🔑</div>
+
+          <div class="logo-text">
+            <strong>KEY'S</strong>
+            <span>INMOBILIARIA</span>
+          </div>
+
+        </div>
+
+        <br>
+
+        <p>
+          Nosotros somos la llave.
+          Conectamos personas con propiedades
+          en Querétaro.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Explora</h3>
+
+        <p><a href="#catalogo">Propiedades</a></p>
+        <p><a href="#zonas">Zonas</a></p>
+        <p><a href="#asesores">Publica tu propiedad</a></p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Contacto</h3>
+
+        <p>Querétaro, México</p>
+        <p>WhatsApp</p>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Key's Inmobiliaria · Todos los derechos reservados.
+
+    </div>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/524427768795?text=Hola%20Key's%20Inmobiliaria,%20me%20interesa%20una%20propiedad."
+    target="_blank"
+    aria-label="WhatsApp"
+  >
+    ☎
+  </a>
+
+
+</body>
+</html>
